@@ -1,0 +1,339 @@
+:root {
+    --primary-color: hsl(231, 18%, 14%);
+    --secondary-color: hsl(229, 17%, 18%);
+    --main-color: hsl(197, 100%, 42%);
+    --gray-color: hsl(230, 3%, 57%);
+    --light-gray-color: hsl(198, 17%, 74%);
+    --white-color: hsl(0, 0%, 100%);
+    --dark-color: hsl(227, 17%, 16%);
+
+
+    --fw-700: 700;
+    --fw-300: 300;
+    --fw-400: 400;
+
+    --f-16: 1rem;
+    --f-14: .875rem;
+    --f-10: .625rem;
+    --f-18: 1.125rem;
+    --f-20: 1.25rem;
+    --f-90: 5.625rem;
+    --f-68: 4.25rem;
+
+    --radius-size: 1.875rem;
+}
+
+
+body {
+    color: var(--gray-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+
+
+}
+
+
+.main-color {
+    color: var(--main-color);
+}
+
+.gray-color {
+    color: var(--gray-color) !important;
+}
+
+.light-gray-color {
+    color: var(--light-gray-color) !important;
+}
+
+.fw-700 {
+    font-weight: var(--fw-700) !important;
+}
+
+.fw-300 {
+    font-weight: var(--fw-300) !important;
+}
+
+.fw-400 {
+    font-weight: var(--fw-400) !important;
+}
+
+.f-16 {
+    font-size: var(--f-16) !important;
+}
+
+.f-14 {
+    font-size: var(--f-14) !important;
+}
+
+.f-10 {
+    font-size: var(--f-10) !important;
+}
+
+.f-20 {
+    font-size: var(--f-20) !important;
+}
+
+.f-18 {
+    font-size: var(--f-18) !important;
+}
+
+.f-68 {
+    font-size: var(--f-68) !important;
+}
+
+.f-90 {
+    font-size: var(--f-90) !important;
+}
+
+
+.w-30 {
+    width: 30%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.container {
+    padding-right: unset !important;
+    padding-left: unset !important;
+    margin-right: unset !important;
+    margin-left: unset !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.row {
+    --bs-gutter-x: 0px;
+}
+
+/* Navbar */
+.active {
+    color: var(--main-color) !important;
+    border: 2px solid var(--main-color) !important;
+
+}
+
+.nav-item .nav-link {
+    line-height: 1.3125rem;
+    padding: 5px 25px !important;
+    color: var(--white-color);
+    border: 2px solid transparent;
+    border-radius: var(--radius-size);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-border-radius: var(--radius-size);
+    -moz-border-radius: var(--radius-size);
+    -ms-border-radius: var(--radius-size);
+    -o-border-radius: var(--radius-size);
+}
+
+.nav-item .nav-link:hover {
+    color: var(--main-color) !important;
+    border: 2px solid var(--main-color) !important;
+
+}
+.navbar-toggler 
+{
+ 
+ 
+    padding: 4px 8px  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--f-18);
+    line-height: unset;
+    border: 2px solid  var(--main-color) ;
+    box-shadow: unset !important;
+}
+.navbar-toggler-icon 
+{
+    background-image: unset ;
+}
+.navbar-nav
+{
+    
+    margin-top: 15px;
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+}
+
+@media screen and (max-width:992px) {
+
+    .navbar-nav
+    {
+           background-color: hsl(229, 15%, 21%) ;
+    }
+    
+}
+/* Header style  */
+header {
+    position: relative; /* required for reference */
+    padding: 4.375rem 0px;
+    background-color: var(--primary-color) !important;
+  
+}
+
+.banner {
+    position: relative;
+    z-index: 0;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 60vh; 
+    background-image: url(../Images/banner.png);
+    z-index: -1;
+}
+
+
+.find-location {
+    width: 85%;
+    position: relative;
+    z-index: 111;
+
+}
+
+.banner input,
+footer input {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: unset !important;
+    padding: 20px 50px 20px 20px !important;
+    border-radius: var(--radius-size) !important;
+    -webkit-border-radius: var(--radius-size) !important;
+    -moz-border-radius: var(--radius-size) !important;
+    -ms-border-radius: var(--radius-size) !important;
+    -o-border-radius: var(--radius-size) !important;
+}
+
+footer input {
+    padding: 16px 50px 16px 20px !important;
+
+}
+
+
+
+.banner input::placeholder,
+footer input::placeholder {
+    color: var(--gray-color) !important;
+}
+
+.main-btn {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+    border-radius: var(--radius-size);
+    -webkit-border-radius: var(--radius-size);
+    -moz-border-radius: var(--radius-size);
+    -ms-border-radius: var(--radius-size);
+    -o-border-radius: var(--radius-size);
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    padding: 0px 40px;
+}
+
+.forecast-table {
+  
+    padding-top: 70px;
+
+}
+
+.forcast-container {
+    background-color: hsl(229, 15%, 23%);
+    width: 90%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+
+.forcast-header {
+    background-color: hsl(229, 15%, 21%);
+    border-top-left-radius: 5px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+
+
+
+.forcast .rounded-1 {
+    border-top-right-radius: 5px !important;
+}
+
+.custom img {
+    width: 21px;
+    height: 21px;
+
+}
+
+.dark-header {
+    background-color: hsl(227, 17%, 16%) !important;
+}
+
+.dark-forcast {
+    background-color: hsl(229, 17%, 18%);
+}
+
+
+footer {
+    background-color: hsl(229, 17%, 18%);
+}
+
+.social-icons .icon {
+    background-color: var(--dark-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.social-icons .icon:hover {
+
+    background-color: var(--main-color);
+
+    i {
+        color: var(--white-color) !important;
+    }
+}

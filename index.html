@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="Images/weather-icon-lg.png" type="image/x-icon">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Style Link -->
+    <link rel="stylesheet" href="Css/Style.css">
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid py-md-4 py-2 px-md-5 px-3 ">
+            <a class="navbar-brand" href="#">
+
+
+                <div class="d-flex text-white ">
+                    <img src="Images/logo@2x.png" alt="" class="w-30">
+                    <div class="d-flex flex-column ps-2 justify-content-end">
+                        <span class="fw-700 f-16">Weather</span>
+                        <span class="fw-300 f-10 gray-color"> tagline goes here </span>
+                    </div>
+                </div>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon ">
+                    <i class="fa-solid fa-list-ul text-white"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-2 py-md-0">
+                    <li class="nav-item  my-md-0 my-1">
+                        <a class="nav-link text-capitalize f-14 mx-2  fw-400 active " aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item my-md-0 my-1">
+                        <a class="nav-link text-capitalize f-14 mx-2 fw-400 " href="#">News</a>
+                    </li>
+                    <li class="nav-item my-md-0 my-1">
+                        <a class="nav-link text-capitalize f-14 mx-2 fw-400 " href="#">Live Camera</a>
+                    </li>
+                    <li class="nav-item my-md-0 my-1">
+                        <a class="nav-link text-capitalize f-14 mx-2 fw-400 " href="#">photos</a>
+                    </li>
+                    <li class="nav-item my-md-0 my-1">
+                        <a class="nav-link text-capitalize f-14 mx-2 fw-400 " href="#">contact</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="banner ">
+
+
+        <div class=" w-90 mx-auto d-flex   position-relative">
+            <input type="text" id="searchInput" class="form-control  mx-auto text-white f-14 "
+                placeholder="Find your Location...">
+            <button class="btn main-btn f-14 fw-400 position-absolute">Find</button>
+        </div>
+
+
+        <div class="forecast-table d-flex justify-content-center ">
+
+            <div class="forcast-container">
+
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <div class="forcast">
+                            <div class="today-forcast  rounded-1 ">
+                                <div
+                                    class="forcast-header px-3  d-flex justify-content-between light-gray-color align-items-center   ">
+
+                                    <div id="todayName"></div>
+                                    <div id="currentDate"></div>
+                                </div>
+
+                                <div class="forcast-content  px-3 py-4">
+
+                                    <div id="country">
+                                    </div>
+                                    <div id="currentTemp">
+                                    </div>
+                                    <div id="forecastIcon">
+                                    </div>
+                                    <div id="weatherText">
+                                    </div>
+                                    <div class="custom pt-3">
+
+                                        <span class="f-14 fw-400 pe-3 ">
+                                            <img src="Images/icon-umberella@2x.png" alt="">
+                                            20%
+                                        </span>
+                                        <span class="f-14 fw-400 pe-3">
+                                            <img src="Images/icon-wind@2x.png" alt="">
+                                            18km/h
+                                        </span>
+                                        <span class="f-14 fw-400 pe-3">
+                                            <img src="Images/icon-compass@2x.png" alt="">
+                                            East
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 dark-forcast">
+                        <div class="forcast ">
+                            <div
+                                class="forcast-header dark-header  rounded-0 d-flex py-2 justify-content-center light-gray-color align-items-center  ">
+                                <div id="tomorrowName">
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="forcast-content  d-flex flex-column align-items-center  justify-content-center px-3 py-4">
+
+                                <div id="tomorrowTempIcon">
+
+                                </div>
+                                <div id="tomorrowMaxDegree">
+
+                                </div>
+                                <div id="tomorrowMinDegree">
+
+                                </div>
+                                <div id="tomorrowCondition">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div class="forcast  ">
+                            <div
+                                class="forcast-header rounded-1   d-flex py-2 justify-content-center light-gray-color align-items-center  ">
+                                <div id="afterTomorrowName"></div>
+
+                            </div>
+                            <div
+                                class="forcast-content  d-flex flex-column align-items-center  justify-content-center px-3 py-4">
+
+                                <div id="afterTomorrowTempIcon">
+
+                                </div>
+                                <div id="afterTomorrowMaxDegree">
+
+                                </div>
+                                <div id="afterTomorrowMinDegree">
+
+                                </div>
+                                <div id="afterTomorrowCondition">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </header>
+
+
+
+
+    <footer class="py-5 d-flex justify-content-center">
+        <div class="container w-90">
+
+            <div class="row justify-content-center align-items-center  ">
+
+                <div class=" col-md-9 py-2">
+                    <div class=" w-100 mx-auto d-flex   position-relative">
+                        <input type="text" class="form-control  mx-auto text-white f-14 "
+                            placeholder="Enter your Email to subscribe...">
+                        <button class="btn main-btn f-14 fw-400 position-absolute">subscribe</button>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 py-2">
+
+                    <div class="social-icons gap-2 d-flex justify-content-center align-items-center">
+                        <div class="icon ">
+                            <i class="fa-brands fa-facebook-f fa-2 main-color"></i>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-brands fa-twitter fa-2 main-color"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-google-plus-g fa-2 main-color"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-pinterest fa-2 main-color"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="light-gray-color pt-3 f-14"> Developed by Yusuf Khaled. Designed by Themezy. All rights
+                    reserved
+
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/Main.Js"></script>
+</body>
+
+</html>
